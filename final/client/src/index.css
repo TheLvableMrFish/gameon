@@ -1,0 +1,497 @@
+:root{
+    --prime: red;
+    --prime2: black;
+}
+
+/* ----- general ----- */
+
+*{box-sizing: border-box;}
+html{font-size: 62.5%;} /*This is to make 10px = 1rem */
+html,body{margin: 0;padding: 0;}
+/* body{
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.673), rgba(0, 0, 0, 0.564), rgba(0, 0, 0, 0.728));
+} */
+
+@media only screen and (min-width: 3839px) {
+    html {
+        /* fix 4k is to small  */
+        font-size: 100%;
+    }
+  }
+
+/* ----- general end ----- */
+
+/* ----- header ----- */
+
+header{
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+}
+
+/* nav */
+
+nav{
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.game-on-logo-nav{
+    text-decoration: none;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.game-on-logo-nav::before{
+    content: "Game";
+    color: var(--prime2);
+}
+.game-on-logo-nav::after{
+    content: "On";
+    color: var(--prime);
+}
+
+.top-nav-item{
+    color: var(--prime2) !important;
+    text-decoration: none;
+    font-size: 2.8rem;
+    /* font-size: 28px; */
+    font-weight: 500;
+    cursor: pointer;
+}
+.top-nav-item:hover{
+    color: var(--prime) !important;
+}
+.top-nav-item{
+    margin-left: 4.1rem;
+}
+
+.nav-form{
+    height: 3.2rem;
+}
+
+.nav-options{
+    justify-content: end;
+}
+
+.spacer{
+    padding-top: 8.2rem;
+}
+
+/* modal start */
+
+.modal-container{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    background-color: rgba(255, 0, 0, 0.5)
+}
+
+.modal-div{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    opacity: 1;
+    color: white;
+    text-align: center;
+}
+
+.modal-form-edits{
+    width: 60%;
+    height: 4rem;
+    font-size: 2.2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.close-modal{
+    position: absolute;
+    right: 3rem;
+    top: 1rem;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-title-text{
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.modal-text{
+    font-size: 1.5rem;
+}
+
+.modal-btn{
+    width: 60%;
+    height: 4rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sign-in-btn{
+    background-color: red;
+    border: red;
+    color: white;
+    border: 0.2rem solid black;
+}
+
+.create-account-btn{
+    background-color: white;
+    border: 0.2rem solid black;
+}
+
+/* modal end */
+
+/* header end */
+
+/* ----- main ----- */
+
+main{
+    margin: 0 0 2rem 0;
+}
+
+/* carousel */
+
+.carousel p{
+    font-size: 1.2rem;
+    padding: 0 .3rem;
+    background: black;
+    opacity: .5
+}
+
+/* Games start */
+
+.game-div{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+.game-div:hover{
+    box-shadow: 4px 4px 4px 1px rgba(255, 0, 0, 0.676);
+}
+
+.div-img{
+    position: relative;
+    background-color: #ececec;
+}
+
+.game-img{
+    width: 100%;
+}
+
+.title{
+    background-color: #fafafa;
+    padding: 1rem 0.5rem;
+}
+
+.user-rating{
+    font-size: 2rem;
+    position: absolute;
+    right: .5rem;
+    top: 0;
+}
+
+.price,.library{
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
+    padding: .3rem;
+    width: 6rem;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+.price:hover{
+    font-size: 0;
+    background-color: var(--prime);
+    border: 1px solid var(--prime);
+}
+.price:hover::after{
+    content: "Buy";
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.game-div:hover .price,.game-div:hover .library{
+    background-color: var(--prime);
+    color: white;
+    border: 1px solid var(--prime);
+}
+
+/* Games end */
+
+/* about start */
+
+.about-section1{
+    margin: 2rem 0;
+}
+
+.about-title{
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin: 0 2rem;
+    margin-top: 3.2rem;
+    margin-bottom: 2rem;
+    color: var(--prime);
+}
+
+.about-text{
+    font-size: 2rem;
+    color: var(--prime2);
+    margin: 0 2rem;
+}
+
+.aboutImg1{
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+}
+
+.about-col{
+    position: relative;
+}
+
+.controller-img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+.about-col:hover .controller-img{
+    animation: controller-spin 1.4s linear 1;
+}
+
+.about-col:hover .about-bg-img{
+    animation: bg-spin 1.4s linear 1;
+}
+
+.about-section2{
+    margin-bottom: 5rem;
+}
+
+@keyframes controller-spin {
+    0% { transform:translate(-50%, -50%) rotate(0deg) scale(1);}
+    25% { transform:translate(-50%, -50%) rotate(90deg) scale(.75);}
+    50% { transform:translate(-50%, -50%) rotate(180deg) scale(.5);}
+    75% { transform:translate(-50%, -50%) rotate(260deg) scale(.75);}
+    100% { transform:translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+@keyframes bg-spin {
+    0% { transform: rotate(360deg);}
+    100% { transform: rotate(0deg); }
+}
+
+/* about end */
+
+/* form start */
+
+.form-title{
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.form-page-text{
+    font-size: 2rem;
+}
+
+.form-label-text{
+    margin-top: 2rem;
+    font-size: 2rem !important;
+}
+
+.form-input-edits{
+    width: 100%;
+    height: 3rem;
+}
+
+.dob{
+    margin-left: 2rem;
+    max-width: 30%;
+    height: 3rem;
+}
+
+.checkbox-div{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+}
+
+.checkbox-text{
+    margin-left: 1rem;
+}
+
+.submit-btn{
+    margin-right: 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    width: 12rem;
+}
+
+/* form userInfo start */
+
+.user-info-drop{
+    font-size: 2rem !important;
+}
+
+.upload-form{
+    font-size: 2rem;
+}
+
+.upload-div{
+    margin-top: 1rem;
+}
+
+/* form userInfo end */
+
+/* form end */
+
+/* single game page start */
+
+/* single page pc start */
+
+.single-game-title{
+    font-size: 3rem;
+}
+
+.single-game-img{
+    width: 100%;
+}
+
+.single-game-details{
+    position: relative;
+    height: inherit;
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.single-game-user_rating,
+.single-game-release{
+    padding-top: 1rem;
+    position: absolute;
+    left: 5%;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.single-game-rating,
+.single-game-price{
+    padding-top: 1rem;
+    position: absolute;
+    right: 5%;
+    color: white;
+    font-size: 2.5rem;
+    text-align: end;
+}
+
+.single-game-release,
+.single-game-price{
+    bottom: 9.5rem;
+}
+
+.single-game-btn{
+    position: absolute;
+    bottom: 3rem;
+    right: 5%;
+    width: 90%;
+    font-size: 2rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    border: white;
+}
+
+.game-gallery{
+    margin: 3rem auto;
+}
+
+/* single page pc end */
+
+/* single page mobile start */
+/* 
+    this is only for specific mobile additions
+    some of the previous styling may flow over
+    so if there is an issue, it should also be
+    checked above this point in the PC portion
+ */
+
+.single-game-details-mobile{
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.single-game-info-mobile{
+    height: 11rem;
+}
+
+.single-game-user_rating-mobile,
+.single-game-release-mobile{
+    margin-left: 10%;
+    font-size: 2rem;
+}
+.single-game-rating-mobile,
+.single-game-price-mobile{
+    text-align: end;
+    margin-right: 10%;
+    font-size: 2rem;
+}
+
+.single-game-btn-mobile{
+    width: 80%;
+    height: 4rem;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    border: white;
+}
+
+@media only screen and (max-width: 392px){
+    .single-game-user_rating-mobile,
+    .single-game-release-mobile,
+    .single-game-rating-mobile,
+    .single-game-price-mobile{
+        font-size: 1.37rem;
+    }
+    .single-game-btn-mobile{
+        margin-top: 1rem;
+    }
+}
+
+/* single page mobile end */
+
+/* single game page end */
+
+/* userinfo start */
+
+.userName{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* userinfo start */
+
+.account-title{
+    font-size: 3rem;
+}
+
+.game-in-lib{
+    font-size: 2rem;
+}
+
+/* userinfo end */
+
+/* ----- main end ----- */
+
+/* ----- footer start ----- */
+
+.copyright-text{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ----- footer end ----- */
